@@ -16,12 +16,11 @@ android {
 
     signingConfigs{
         release {
-            storeFile file("/../keystore.jks")
-            storePassword "xbr19921010"
-            keyAlias "remix"
-            keyPassword "xbr19921010"
+            storeFile file("/../Debug.jks")
+            storePassword "123456"
+            keyAlias "Debug"
+            keyPassword "123456"
         }
-
     }
 
     buildTypes {
