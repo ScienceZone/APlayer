@@ -15,17 +15,18 @@ android {
     }
 
     signingConfigs{
-        release {
+        debug {
             storeFile file("/../Debug.jks")
             storePassword "123456"
             keyAlias "Debug"
             keyPassword "123456"
         }
+
     }
 
     buildTypes {
         debug {
-            signingConfig signingConfigs.release
+            signingConfig signingConfigs.debug
             debuggable true
             minifyEnabled false
         }
@@ -35,10 +36,10 @@ android {
             debuggable false
             zipAlignEnabled true
             shrinkResources true
-            signingConfig signingConfigs.release
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    
     productFlavors {
         qihu360{}
 //        assistant91{}
